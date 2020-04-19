@@ -1,5 +1,5 @@
 ---
-title: About
+title: whoami
 
 # The About page
 # v2.0
@@ -8,4 +8,33 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+As Morpheus said in matrix movie:
+> There's a difference between knowing the path and 
+> walking the path.
+
+
+
+Penetration Tester
+
+LANGUAGES
+  ★★★★☆ English
+  ★★★★☆ Spanish
+
+SKILLS
+  ★★★★☆ Red teaming 
+  ★★☆☆☆ Exploit development
+  ★★☆☆☆ Assembly Language
+  ★★☆☆☆ C Programming
+  ★★☆☆☆ Python
+  ★★☆☆☆ Malware
+  ★★☆☆☆ Reverse 
+  ★★☆☆☆ OWASP
+
+.
+CERTIFICATIONS
+  * GIAC GPEN, Las Vegas, September 2016 – September 2016
+  * OSCP , Offensive Security, May 2017 – August 2019
+  * OSCE , Offensive Security, May 2019 – September 2019
+
+FUTURE INTERESTS
+  * Advance Windows Exploitation and Advanced Web Attack an Exploitations (AWAE)
