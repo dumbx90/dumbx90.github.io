@@ -1,7 +1,7 @@
 ---
 title: Rop Emporium ret2win 32 bits
 author: dumb
-date: 2019-08-08 14:10:00 +0800
+date: 2018-12-09 14:10:00 +0800
 categories: [Blogging, Tutorial]
 tags: [rop]
 ---
