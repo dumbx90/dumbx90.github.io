@@ -188,7 +188,7 @@ objectSid:: AQQAAAAAAAUVAAAALB4ltxV1shXFsPNP
 The same result can be did with **windapsearch.py**: 
 
 ```bash
-dumbland () hgfs/hackthebox/forest :: ~/pentest/windapsearch/windapsearch.py -d htb --dc-ip 10.10.10.161 --custom objectclass=\*                                                        1 ↵
+dumbland () hgfs/hackthebox/forest :: ~/pentest/windapsearch/windapsearch.py -d htb --dc-ip 10.10.10.161 --custom objectclass=\* 
 [+] No username provided. Will try anonymous bind.
 [+] Using Domain Controller at: 10.10.10.161
 [+] Getting defaultNamingContext from Root DSE
