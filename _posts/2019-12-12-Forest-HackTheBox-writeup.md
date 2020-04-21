@@ -2,7 +2,7 @@
 title: Forest HackTheBox writeup made by a dump !!!
 author: dumbx90
 date: 2019-12-12 14:10:00 +0800
-categories: [Blogging, Tutorial]
+categories: [Blogging, HTB, Writeup]
 tags: [htb,pentest,windows,activedirectory,easy]
 ---
 
