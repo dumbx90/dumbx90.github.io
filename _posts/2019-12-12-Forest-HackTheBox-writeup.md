@@ -6,7 +6,7 @@ categories: [Blogging, Tutorial]
 tags: [htb,pentest,windows,activedirectory,easy]
 ---
 
-
+![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/forest-description.png?raw=true)
 
 <script id="asciicast-7qNiXMLBlH5xN0amZGTJ8bYWU" src="https://asciinema.org/a/7qNiXMLBlH5xN0amZGTJ8bYWU.js" async></script>
 
@@ -395,7 +395,7 @@ Invoke-Bloodhound -CollectionMethod All -LDAPPort 389 -LDAPUser svc-alfresco -LD
 
 Collect the file generate by sharphound and import in bloodhound. Lets analyze the informations to see if I  found the path to pwn the active directory:
 
-[/mnt/hgfs/hackthebox/forest/bloodhound-path.png]([/mnt/hgfs/hackthebox/forest/bloodhound-path.png)
+![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/forest-blodhound-path.jpg?raw=true)
 
 We see two important information:
 
