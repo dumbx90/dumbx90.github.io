@@ -3,7 +3,7 @@ title: Active HackTheBox writeup made by a dumb !!!
 author: dumbx90
 date: 2019-12-26 14:10:00 +0800
 categories: [Blogging, HTB, Writeup]
-tags: [htb,pentest,windows,activedirectory,easy,retired]
+tags: [htb,pentest,windows,activedirectory,medium,retired]
 ---
 
 ![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/active-description.png?raw=true)
