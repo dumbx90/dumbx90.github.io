@@ -504,6 +504,24 @@ c:\Users\Administrator\Desktop>
 
 
 
+## Tools used in this post
+
+- https://github.com/BloodHoundAD/BloodHound
+- https://github.com/SecureAuthCorp/impacket
+- https://github.com/vanhauser-thc/thc-hydra
+- https://github.com/Hackplayers/evil-winrm
+- https://github.com/PowerShellMafia/PowerSploit (use dev branch)
+
+## Terminal Customization 
+
+- https://eugeny.github.io/terminus/
+
+- https://ohmyz.sh/ (afowler theme)
+
+- https://github.com/samoshkin/tmux-config
+
+  
+
 ## Reference Links
 
 - https://www.blackhat.com/docs/us-17/wednesday/us-17-Robbins-An-ACE-Up-The-Sleeve-Designing-Active-Directory-DACL-Backdoors.pdf
@@ -517,3 +535,4 @@ c:\Users\Administrator\Desktop>
 - https://m0chan.github.io/2019/07/31/How-To-Attack-Kerberos-101.html
 
 - https://www.tarlogic.com/en/blog/how-to-attack-kerberos/
+
