@@ -144,7 +144,7 @@ text: 000004DC: LdapErr: DSID-0C09075A, comment: In order to perform this opera
 
 ## Smbclient
 
-The result was not expected. So I move on to **smb service** : 
+The result of ldap was not expected. So I move on to **smb service** : 
 
 ```bash
 dumbland () hackthebox/active/recon :: smbclient  -L \\10.10.10.100 -N
