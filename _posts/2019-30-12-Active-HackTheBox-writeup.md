@@ -6,7 +6,7 @@ categories: [Blogging, HTB, Writeup]
 tags: [htb,pentest,windows,activedirectory,easy,retired]
 ---
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/active-description.png?raw=true)
+![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/active-description.png?raw=true)
 
 <script id="asciicast-wKyjZ7BdMOlv3jOgXx4S4D28h" src="https://asciinema.org/a/wKyjZ7BdMOlv3jOgXx4S4D28h.js" async></script>
 
