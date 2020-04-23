@@ -6,7 +6,7 @@ categories: [Blogging, HTB, Writeup]
 tags: [htb,pentest,linux,easy,retired]
 ---
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/traverxec-description.png?raw=true)
+![](https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/traverexec-description.png?raw=true)
 
 <script id="asciicast-TMbUWb7dq1pZZBwuQmiX7g9t0" src="https://asciinema.org/a/TMbUWb7dq1pZZBwuQmiX7g9t0.js" async></script>
 
@@ -58,7 +58,7 @@ Nmap done: 1 IP address (1 host up) scanned in 23.03 seconds
 
 Lets check looks like main page:
 
-![traverexec-mainpage](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/traverxec-mainpage.png?raw=true)
+![traverexec-mainpage](https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/traverexec-mainpage.png?raw=true)
 
 
 
@@ -368,7 +368,8 @@ dumbland () hgfs/hackthebox/traverxec :: /usr/share/john/ssh2john.py id_rsa-davi
 dumbland () hgfs/hackthebox/traverxec :: /usr/share/john/ssh2john.py id_rsa-david
 david:$sshng$1$16$477EEFFBA56F9D283D349033D5D08C4F$1200$b1ec9e1ff7de1b5f5395468c76f1d92bfdaa7
 f2f29c3076bf6c83be71e213e9249f186ae856a2b08de0b3c957ec1f086b6e8813df672f993e494b90e9de220828a
-ee2e45465b8938eb9d69c1e9199e3b13f0830cde39dd2cd491923c424d7dd62b35bd5453ee8d24199c733d261a3a27c3bc2d3ce5face868cfa45c63a3602bda73f08e87dd41e8cf05e3bb917c0315444952972c02da4701b5da248f4b1
+ee2e45465b8938eb9d69c1e9199e3b13f0830cde39dd2cd491923c424d7dd62b35bd5453ee8d24199c733d261a3a2
+7c3bc2d3ce5face868cfa45c63a3602bda73f08e87dd41e8cf05e3bb917c0315444952972c02da4701b5da248f4b1
 725fc22143c7eb4ce38bb81326b92130873f4a563c369222c12f2292fac513f7f57b1c75475b8ed8fc454582b1172
 aed0e3fcac5b5850b43eee4ee77dbedf1c880a27fe906197baf6bd005c43adbf8e3321c63538c1abc90a79095ced7
 021cbc92ffd1ac441d1dd13b65a98d8b5e4fb59ee60fcb26498729e013b6cff63b29fa179c75346a56a4e73fbcc8f
