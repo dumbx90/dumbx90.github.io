@@ -506,6 +506,7 @@ c:\Users\Administrator\Desktop>
 
 ## Tools used in this post
 
+- https://linux.die.net/man/1/ldapsearch
 - https://github.com/BloodHoundAD/BloodHound
 - https://github.com/SecureAuthCorp/impacket
 - https://github.com/vanhauser-thc/thc-hydra
