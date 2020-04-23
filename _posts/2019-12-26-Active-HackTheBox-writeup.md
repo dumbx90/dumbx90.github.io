@@ -336,7 +336,7 @@ I Combine booth user lists and sort them to remove duplicate names. Now Lets div
 
 ## Kerberoasting 101 for dummies
 
->  A common technique of gain privilege in a Active Directory Domain i revealed in DerbyCon 2014( See link for a better explanation).  Basic this technique get the hash  from Kerberos TGT, to crack them offline.
+>  A common technique of gain privilege in a Active Directory Domain revealed in DerbyCon 2014( See link for a better explanation).  Basic this technique get the hash from Kerberos TGT, to crack them offline.
 
 
 
