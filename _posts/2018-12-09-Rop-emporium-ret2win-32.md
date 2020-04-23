@@ -3,7 +3,7 @@ title: Rop Emporium ret2win 32 bits
 author: dumb
 date: 2018-12-09 14:10:00 +0800
 categories: [Blogging, Ropemporium]
-tags: [rop]
+tags: [ropemporium]
 ---
 
 [Rop Emporium retwin Challenge](https://ropemporium.com/challenge/ret2win.html)
