@@ -56,7 +56,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 23.03 seconds
 ```
 
-Lets check looks like main page:
+Lets check what looks like main page:
 
 ![traverexec-mainpage](https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/traverexec-mainpage.png?raw=true)
 

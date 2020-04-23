@@ -387,7 +387,7 @@ $krb5tgs$23$*Administrator$ACTIVE.HTB$active/CIFS~445*$9b78e5712a480f7bcece18985
 
 
 
-Now it is *easy* part. Crack the hash:
+Now it is *The easy* part. Crack the hash:
 
 ```bash
 dumbland () hackthebox/active/recon :: hashcat -m 13100 --force -a 0 admin-hash.txt
