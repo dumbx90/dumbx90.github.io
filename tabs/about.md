@@ -9,10 +9,8 @@ title: whoami
 ---
 
 
-As Morpheus said in matrix movie:
-> There's a difference between knowing the path and 
-> walking the path.
-
+### As Morpheus said in matrix movie:  
+>### There's a difference between knowing the path and walking the path.
 
 
 ## Penetration Tester
@@ -42,4 +40,5 @@ CERTIFICATIONS
   * OSCE , Offensive Security, May 2019 – September 2019
 
 FUTURE INTERESTS
+
   * Advance Windows Exploitation and Advanced Web Attack an Exploitations (AWAE)
