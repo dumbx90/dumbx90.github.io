@@ -17,21 +17,25 @@ As Morpheus said in matrix movie:
 Penetration Tester
 
 LANGUAGES
-  ★★★★☆ English
+
+  ★★★★☆ English    
   ★★★★☆ Spanish
 
-SKILLS
-  ★★★★☆ Red teaming 
-  ★★☆☆☆ Exploit development
-  ★★☆☆☆ Assembly Language
-  ★★☆☆☆ C Programming
-  ★★☆☆☆ Python
-  ★★☆☆☆ Malware
-  ★★☆☆☆ Reverse 
-  ★★☆☆☆ OWASP
+SKILLS  
+
+  ★★★★☆ Red teaming  
+  ★★☆☆☆ Exploit development  
+  ★★☆☆☆ Assembly Language  
+  ★★☆☆☆ C Programming  
+  ★★☆☆☆ Python  
+  ★★☆☆☆ Malware  
+  ★★☆☆☆ Reverse  
+  ★★☆☆☆ OWASP  
+
 
 .
 CERTIFICATIONS
+
   * GIAC GPEN, Las Vegas, September 2016 – September 2016
   * OSCP , Offensive Security, May 2017 – August 2017
   * OSCE , Offensive Security, May 2019 – September 2019
