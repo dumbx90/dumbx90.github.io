@@ -25,12 +25,8 @@ SKILLS
 
   ★★★★☆ Red teaming  
   ★★☆☆☆ Exploit development  
-  ★★☆☆☆ Assembly Language  
-  ★★☆☆☆ C Programming  
   ★★☆☆☆ Python  
-  ★★☆☆☆ Malware  
-  ★★☆☆☆ Reverse  
-  ★★☆☆☆ OWASP  
+  
 
 
 CERTIFICATIONS
