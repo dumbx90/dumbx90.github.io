@@ -58,7 +58,7 @@ Nmap done: 1 IP address (1 host up) scanned in 23.03 seconds
 
 Lets check looks like main page:
 
-![traverexec-mainpage](/home/dumb/Documents/learn-notes/htb-writeups/traverexec/traverexec-mainpage.png)
+![traverexec-mainpage](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/traverxec-mainpage.png?raw=true)
 
 
 
