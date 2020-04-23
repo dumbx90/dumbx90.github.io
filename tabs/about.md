@@ -33,7 +33,7 @@ SKILLS
 .
 CERTIFICATIONS
   * GIAC GPEN, Las Vegas, September 2016 – September 2016
-  * OSCP , Offensive Security, May 2017 – August 2019
+  * OSCP , Offensive Security, May 2017 – August 2017
   * OSCE , Offensive Security, May 2019 – September 2019
 
 FUTURE INTERESTS
