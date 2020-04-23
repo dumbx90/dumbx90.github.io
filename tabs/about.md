@@ -1,5 +1,5 @@
 ---
-title: id
+title: about
 
 # The About page
 # v2.0
@@ -33,7 +33,6 @@ SKILLS
   ★★☆☆☆ OWASP  
 
 
-.
 CERTIFICATIONS
 
   * GIAC GPEN, Las Vegas, September 2016 – September 2016
@@ -42,4 +41,5 @@ CERTIFICATIONS
 
 FUTURE INTERESTS
 
-  * Advance Windows Exploitation and Advanced Web Attack an Exploitations (AWAE)
+  * Advance Windows Exploitation
+  * Advanced Web Attack an Exploitations (AWAE)
