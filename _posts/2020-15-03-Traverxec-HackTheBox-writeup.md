@@ -469,7 +469,7 @@ lines 1-6/6 (END)
 
 
 
-As we can see we cath the execution of ***less*** command:
+As we can see we catch the execution of ***less*** command:
 
 ```bash
 Apr 23 10:18:41 traverxec nhttpd[458]: max. file descriptors = 1040 (cur) / 1040 (max)
