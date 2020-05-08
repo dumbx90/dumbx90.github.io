@@ -6,7 +6,11 @@ categories: [Blogging, HTB, Writeup]
 tags: [htb,pentest,windows,hard,services,retired]
 ---
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/active-description.png?raw=true)
+
+
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-infocard.png" alt="control-webpage" style="zoom:75%;" />
+
+
 
 <script id="asciicast-IjAIFheWFsb5wVNBZReXTyXLg" src="https://asciinema.org/a/IjAIFheWFsb5wVNBZReXTyXLg.js" async></script>
 
