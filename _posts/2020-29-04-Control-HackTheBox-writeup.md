@@ -44,7 +44,7 @@ The control  is a hard machine. First we fuzz  **HTTP Headers** to bypass  filte
 
 
 
-A simple nmap scan reveals a lot of open ports:
+Start with simple nmap to discovery what services is running in the box:
 
 ```bash
 # Nmap 7.80 scan initiated Wed Apr  8 07:21:14 2020 as: nmap -sC -sV -p80,135,3306,49666,49667 -oA nmap-all-10.10.10.167 10.10.10.167
