@@ -12,7 +12,7 @@ tags: [htb,pentest,windows,hard,services,retired]
 
 ## Sumary 
 
-The control machine is a hard machine. First we fuzz  **HTTP Headers** to bypass  filter to access the administrator page, after we discovery a **sql injection** and get hashes and upload a webshell that give us a command execution which can be used to initial shell. After initial shell we move to **hector** user and discovery what services this particular user is in **control**. Change  path of binary and start the service get us a **Administrator Shell**. 
+The control  is a hard machine. First we fuzz  **HTTP Headers** to bypass  filter to access the administrator page, after we discovery a **sql injection** and get hashes and upload a webshell that give us a command execution which can be used to initial shell. After initial shell we move to **hector** user and discovery what services this particular user is in **control**. Change  path of binary and start the service get us a **Administrator Shell**. 
 
 
 
