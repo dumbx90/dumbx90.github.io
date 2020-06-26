@@ -16,7 +16,7 @@ tags: [pwn,linux,ctf]
 
 ## File Descriptor
 
-> A unique non negative number that identifies an open files in computer operation system.
+> A unique non negative number that identifies an open files handled by a process in computer operation system.
 
 File Descriptor  are primary used in Unix system, but nowadays are used by the modern operation system.  In POSIX system all process have at least three file descriptor: Input , Output and Error.
 
