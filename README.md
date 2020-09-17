@@ -1,2 +1,2 @@
 Just a bounch of notes and writeup to help me understading 
-when I learn something new. This notes is only for educational ... 
+when I learn something new.
