@@ -100,9 +100,9 @@ The **nmap**  scan give more two vrtual hosts plus what I alread know :
 
 Let me see how this hosts looks like:
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/blog-travel.png" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/blog-travel.png" style="zoom:75%;" />
 
-![](/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/blog-dev-travel.png)
+![](https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/blog-dev-travel.png)
 
 
 
@@ -638,9 +638,9 @@ $ bat customfeed.xml| head
 
 Make one request to *http://blog.travel.htb/awesome-rss/?custom_feed_url=http://10.10.14.21/myfeed.xml*  result in two in my computer, but one request the same xml again is only one request is created: 
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/reques-custom_feed.png" alt="reques-custom_feed" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/reques-custom_feed.png" alt="reques-custom_feed" style="zoom:75%;" />
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/reques-custom_feed-2.png" alt="reques-custom_feed-2" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/reques-custom_feed-2.png" alt="reques-custom_feed-2" style="zoom:75%;" />
 
 
 
@@ -652,13 +652,13 @@ Reading the source code of **rss_template.php**  I created a request with **debu
 
 > The memcache is used to cache the feed of rss xml, serialize the php data and creating a key for each xml. The key start with the string *xct_*
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/debug-render-page.png" alt="debug-render-page" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/debug-render-page.png" alt="debug-render-page" style="zoom:75%;" />
 
 Reading the **README.MD** in the git repository I can found the correct path of **debug.php**: 
 
 	> http://blog.travel.htb/wp-content/themes/twentytwenty/debug.php
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/debug-burp.png" alt="debug-burp" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/debug-burp.png" alt="debug-burp" style="zoom:75%;" />
 
 ### Understading the name 
 
@@ -678,9 +678,9 @@ $this->name = $this->options['extras']['prefix'] . md5("$name:$type");
 
 $name it the md5 of url and $type is string "spc". Lets check if my assumption is correct:
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/md5_burp.png" alt="md5_burp" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/md5_burp.png" alt="md5_burp" style="zoom:75%;" />
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/md5_terminal.png" alt="md5_terminal" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/md5_terminal.png" alt="md5_terminal" style="zoom:75%;" />
 
 
 
@@ -702,7 +702,7 @@ Upgrade-Insecure-Requests: 1
 
 
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/gopher-not-work.png" alt="gopher-not-work" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/gopher-not-work.png" alt="gopher-not-work" style="zoom:75%;" />
 
 ## Puting all together 
 
@@ -754,7 +754,7 @@ Connection: close
 Upgrade-Insecure-Requests: 1
 ```
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/poison-memcache.png" alt="poison-memcache" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/poison-memcache.png" alt="poison-memcache" style="zoom:75%;" />
 
 
 
@@ -850,7 +850,7 @@ Upgrade-Insecure-Requests: 1
 
 2. Chek *debug.php* to see if mencache was poised
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/webshel-injected_serialization_php.png" alt="webshel-injected_serialization_php" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/webshel-injected_serialization_php.png" alt="webshel-injected_serialization_php" style="zoom:75%;" />
 
 3. Send another request to the same page of hash I discovered in the #understanding the name topic. This will trigger the deserialization and  create w web-shell named *dumb.php*
 
@@ -867,11 +867,11 @@ Upgrade-Insecure-Requests: 1
 
 4.  Send a request to location of web-shell:
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/shell-OK.png" alt="shell-OK" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/shell-OK.png" alt="shell-OK" style="zoom:75%;" />
 
 > I don't know why put this hole process has to be fast and less than 60 seconds, in fact, I don't  know too if this affirmation is true. 
 
-<img src="/home/pwndumb/Documents/cyber-notes/dumbx90.github.io/assets/img/commons/hackthebox/travel/web-shell-whoami.png" alt="web-shell-whoami" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/assets/img/commons/hackthebox/travel/web-shell-whoami.png" alt="web-shell-whoami" style="zoom:75%;" />
 
 ### Reverse Shell 
 
