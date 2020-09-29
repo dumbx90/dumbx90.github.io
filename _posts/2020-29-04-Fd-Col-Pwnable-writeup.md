@@ -2,7 +2,7 @@
 title: FD and Collision  pwnables.kr writeup made by a dumb !!!
 author: dumbx90
 date: 2020-05-29 14:10:00 +0800
-categories: [Pwn,Writeup]
+categories: [Pwn]
 tags: [pwn,linux,ctf]
 ---
 
