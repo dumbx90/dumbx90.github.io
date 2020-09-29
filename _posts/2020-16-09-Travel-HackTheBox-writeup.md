@@ -106,7 +106,7 @@ Let me see how this hosts looks like:
 
 ### wpscan 
 
-Afer analuse the source code of **blog.htb.travel**  I realize that site is a **Wordpress CMS**. Running *wpscan* for check if website is running any vulnerable plugins:
+After analyzing the source code of **blog.htb.travel**  I realize that site is a **Wordpress CMS**. Running *wpscan* for check if website is running any vulnerable plugins:
 
 ```bash
 $ wpscan --url http://blog.travel.htb --enumerate
@@ -249,13 +249,13 @@ Interesting Finding(s):
 
 ```
 
-This scan not give anithing interesting. 
+This scan not give anything interesting. 
 
 ### Awesome RSS
 
-![](www.dumbx90.github.io/assets/img/commons/hackthebox/travel/awesome-rss.png)
+![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/travel/awesome-rss.png?raw=true)
 
-![](www.dumbx90.github.io/assets/img/commons/hackthebox/travel/awesome-rss-post.png)
+![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/travel/awesome-rss-post.png?raw=true)
 
 
 
