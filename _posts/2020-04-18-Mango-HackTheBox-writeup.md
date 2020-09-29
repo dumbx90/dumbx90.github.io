@@ -2,7 +2,7 @@
 title: Mango HackTheBox writeup made by a dumb !!!
 author: dumbx90
 date: 2020-04-18 14:10:00 +0800
-categories: [Blogging, HTB, Writeup]
+categories: [HTB, Writeup]
 tags: [htb,pentest,linux,web,medium,retired,nosqli]
 ---
 

@@ -2,7 +2,7 @@
 title: Control HackTheBox writeup made by a dumb !!!
 author: dumbx90
 date: 2020-04-29 14:10:00 +0800
-categories: [Blogging, HTB, Writeup]
+categories: [HTB, Writeup]
 tags: [htb,pentest,windows,hard,services,retired]
 ---
 
@@ -113,7 +113,7 @@ Looking for something useful in source page I saw this note write in the comment
 
 
 
-## Ffluf
+## Ffuf
 
 
 
