@@ -16,21 +16,17 @@ tags: [htb,hard,retired,linux,memcahe,PHP Serialization]
 
 ## Summary 
 
-Travel  is a hard machine. Using ffuf I found the .git folder and downloaded with **git-dumper.py** . Read the source code of the applications I found a entry point, but I have to learn a lot to understanding this. The application use memcache with serialized objects in **Php**. After a lot of try and errors, I'm able to achieve a **RCE** that give me a initial shell in the machine. Lookup for creds, I found one **LDAP HASH**, cracked and use this credentials to give a root access, because the user is the **LDAP Administrator** and I abuse this feature to get a root shell.  
+Travel  is a hard machine. Using ffuf I found the **.git** folder and downloaded with **git-dumper.py** . Read the source code of the applications I found a entry point, but I have to learn a lot to understanding this. The application use memcache with serialized objects in **Php**. After a lot of try and errors, I'm able to achieve a **RCE** that give me a initial shell in the machine. Lookup for creds, I found one **LDAP HASH**, cracked and use this credentials to give a root access, because the user is the **LDAP Administrator** and I abuse this feature to get a root shell.  
 
 
 
 ## Skills Necessary  
 
 - Recon
-
 - Web Enumeration
-
 - Basic knowledge how user Burp Suite
-
-- LDAP
-
 - Memcache
+- LDAP
 
 
 ## Skills Learned
@@ -96,7 +92,7 @@ The **nmap**  scan give more two vrtual hosts plus what I alread know :
 - blog.travel.htb
 - blog-dev.travel.htb
 
-Let me see how this hosts looks like:
+Browser in theses hosts I not saw anything special.
 
 <img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/blog-travel.png" style="zoom:75%;" />
 
@@ -527,7 +523,7 @@ This  tell me the path where is the file **rss_template.php** and the **logs** d
 
 
 
-In the line 5 the script include the file **template.php**. In the line 12 is include the file **class-simplepie.php** that is a plugin for **WordPress** to handle with **RSS feed**.  In the line 11 is created the function **get_feed**, which have as parameter one url. This functions fetch  url contents (line 14) and create a **Simple Pie** object, and use memcache to save feeds. 
+In the line 5 the script include the file **template.php**. The line 12 is included the file **class-simplepie.php** that is a plugin for **WordPress** to handle with **RSS feed**.  In the line 11 is created the function **get_feed**, which have as parameter one url. This functions fetch  url contents (line 14) and create a **Simple Pie** object and use memcache to save feeds. 
 In the line 34 the code check for **custom_feed_url** - If this variable exist in **GET**  parameter, the applications gets feed from that parameter otherwise is made a request to  **http://www.travel.htb/newsfeed/customfeed.xml**. 
 
 
@@ -902,30 +898,18 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 
 - Hascat
 
-- https://mybrowseraddon.com/modify-header-value.html
-
-  
-
-## Terminal Customization 
-
-- https://eugeny.github.io/terminus/
-
-- https://ohmyz.sh/ (afowler theme)
-
-- https://github.com/samoshkin/tmux-config
+- Gopherus
 
   
 
 ## Reference Links
 
-- http://securityidiots.com/Web-Pentest/SQL-Injection/Part-1-Basic-of-SQL-for-SQLi.html
-- https://ctf101.org/web-exploitation/sql-injection/what-is-sql-injection/
-- https://portswigger.net/web-security/sql-injection/cheat-sheet
+- https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf
 
-- https://dev.mysql.com/doc/refman/8.0/en/information-schema.html
+- https://book.hacktricks.xyz/pentesting-web/ssrf-server-side-request-forgery
 
-- https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
+- https://book.hacktricks.xyz/pentesting/11211-memcache
 
-- https://sec-consult.com/en/blog/2019/04/windows-privilege-escalation-an-approach-for-penetration-testers/
+- https://niiconsulting.com/checkmate/2013/05/memcache-exploit/
 
   
