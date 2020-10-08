@@ -37,8 +37,6 @@ Travel  is a hard machine. Using ffuf I found the **.git** folder and downloaded
 - LDAP Attibutes
 
 
-
-
 ## Recon 
 
 Start with simple nmap to discovery what services is running in the box:
