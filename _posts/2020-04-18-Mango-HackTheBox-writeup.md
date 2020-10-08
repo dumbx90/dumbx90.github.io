@@ -22,7 +22,7 @@ This writeup is highly inspired in [Ippsec video](https://www.youtube.com/watch?
 
 ## Synopsis 
 
-Mango is a medium machine. In my opinion this machine is hard. We have to fuzz usernames and passwords using **NoSQLI** injection in the login page. After that we get a ssh shell. We move laterally to other user with password found in **NOSQLI** step. In the end we exploit a suid binary to get a root shell.
+Mango is medium machine. In my opinion this machine is hard. We have to fuzz usernames and passwords using **NoSQLI** injection in the login page. After that we get a ssh shell. We move laterally to other user with password found in **NOSQLI** step. In the end we exploit a suid binary to get a root shell.
 
 ## Skills Necessary  
 
