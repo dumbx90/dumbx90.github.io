@@ -16,7 +16,7 @@ tags: [htb,hard,retired,linux,memcahe,PHP Serialization]
 
 ## Summary 
 
-Travel  is a hard machine. Using ffuf I found the **.git** folder and downloaded with **git-dumper.py** . Read the source code of the applications I found a entry point, but I have to learn a lot to understanding what is this about. The application use memcache with serialized objects in **Php**. After a lot of try and errors, I'm able to achieve a **RCE** that give me initial shell in the machine. Lookup for creds, I found one **LDAP HASH**, cracked and use this credentials to give a root access, because the user is the **LDAP Administrator** and I abuse this feature to get a root shell.  
+Travel  is a hard machine. Using ffuf I found the **.git** folder and downloaded with **git-dumper.py** . Read the source code of the applications I found a entry point, but I have to learn a lot to understanding what is about. The application use memcache with serialized objects in **Php**. After a lot of try and errors, I'm able to achieve a **RCE** that give me initial shell in the machine. Lookup for creds, I found one **LDAP HASH**, cracked and use this credentials to give a root access, because the user is the **LDAP Administrator** and I abuse this feature to get a root shell.  
 
 
 
