@@ -65,7 +65,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 20.81 seconds
 ```
 
-In the nmap we found three virtual hosts, so lets change the file */etc/hosts* and add this virtual hosts:
+In the nmap I found three virtual hosts, so lets change the file */etc/hosts* and add this virtual hosts:
 
 ```bash
 bat /etc/hosts
@@ -243,7 +243,7 @@ Interesting Finding(s):
 
 ```
 
-This scan not give anything interesting. 
+This scan not give anything. 
 
 ### Awesome RSS
 
@@ -282,7 +282,7 @@ Two thing came to my eyes:
 1. The import is linked to **blog-dev.travel.htb**
 2. The **DEBUG** word. 
 
-I dont realize what this **DEBUG**, so I move on and try a directory brute force in **blog-devel.travel.htb**. 
+I don't realize what  **DEBUG** is, so I pass and try a directory brute force in **blog-devel.travel.htb**. 
 
 ## ffuf 
 
