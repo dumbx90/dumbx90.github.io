@@ -18,7 +18,7 @@ title: About
 
 LANGUAGES
 
-  ★★★★☆ English    
+  ★★★☆☆ English    
   ★★★★☆ Spanish
 
 SKILLS  
