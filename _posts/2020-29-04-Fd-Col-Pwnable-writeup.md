@@ -2,8 +2,8 @@
 title: FD and Collision  pwnables.kr writeup
 author: pwndumb
 date: 2020-05-29 14:10:00 +0800
-categories: [Pwn]
-tags: [pwnexploitation,linux,ctf]
+categories: [Pwn,Linux]
+tags: [pwnexploitation,linux]
 ---
 
 # Pwnable.kr 

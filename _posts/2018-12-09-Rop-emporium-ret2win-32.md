@@ -2,8 +2,8 @@
 title: Rop Emporium ret2win 32 bits
 author: pwndumb
 date: 2018-12-09 14:10:00 +0800
-categories: [Ropemporium]
-tags: [ropemporium]
+categories: [ROP,Ropemporium]
+tags: [ROP,ropemporium]
 ---
 
 [Rop Emporium retwin Challenge](https://ropemporium.com/challenge/ret2win.html)
