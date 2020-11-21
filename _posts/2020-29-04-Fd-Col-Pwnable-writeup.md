@@ -1,9 +1,9 @@
 ---
-title: FD and Collision  pwnables.kr writeup made by a dumb !!!
-author: dumbx90
+title: FD and Collision  pwnables.kr writeup
+author: pwndumb
 date: 2020-05-29 14:10:00 +0800
 categories: [Pwn]
-tags: [pwn,linux,ctf]
+tags: [pwnexploitation,linux,ctf]
 ---
 
 # Pwnable.kr 

@@ -1,12 +1,12 @@
 ---
-title: Traverxec HackTheBox writeup made by a dumb !!!
-author: dumbx90
+title: Traverxec HackTheBox writeup
+author: pwndumb
 date: 2020-03-29 14:10:00 +0800
 categories: [HTB, Writeup]
 tags: [htb,pentest,linux,easy,retired]
 ---
 
-![](https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/traverexec-description.png?raw=true)
+![](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/traverexec-description.png?raw=true)
 
 <script id="asciicast-TMbUWb7dq1pZZBwuQmiX7g9t0" src="https://asciinema.org/a/TMbUWb7dq1pZZBwuQmiX7g9t0.js" async></script>
 
@@ -58,7 +58,7 @@ Nmap done: 1 IP address (1 host up) scanned in 23.03 seconds
 
 Lets check what looks like main page:
 
-![traverexec-mainpage](https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/traverexec-mainpage.png?raw=true)
+![traverexec-mainpage](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/traverexec-mainpage.png?raw=true)
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: Rop Emporium ret2win 32 bits
-author: dumb
+author: pwndumb
 date: 2018-12-09 14:10:00 +0800
 categories: [Ropemporium]
 tags: [ropemporium]

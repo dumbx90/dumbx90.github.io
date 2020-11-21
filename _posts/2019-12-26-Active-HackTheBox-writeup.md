@@ -1,12 +1,12 @@
 ---
-title: Active HackTheBox writeup made by a dumb !!!
-author: dumbx90
+title: Active HackTheBox writeup
+author: pwndumb
 date: 2019-12-26 14:10:00 +0800
 categories: [HTB, Writeup]
 tags: [htb,pentest,windows,activedirectory,medium,retired]
 ---
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/active-description.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/active-description.png?raw=true)
 
 <script id="asciicast-wKyjZ7BdMOlv3jOgXx4S4D28h" src="https://asciinema.org/a/wKyjZ7BdMOlv3jOgXx4S4D28h.js" async></script>
 

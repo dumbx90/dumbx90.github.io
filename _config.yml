@@ -8,7 +8,7 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: dumbx90                           # the main title
+title: pwndumb                           # the main title
 
 tagline: Adventures of a dumb in infosec # it will display as the sub-title
 
@@ -18,25 +18,25 @@ description: >-                        # used by seo meta and the atom feed
   and focuses on text presentation.
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'https://dumbx90.github.io/'
+url: 'https://pwndumb.github.io/'
 
-author: dumbx90                            # change to your full name
+author: pwndumb                            # change to your full name
 
 avatar: /assets/img/sample/avatar.jpg   # support internet resources
 
 github:
-  username: dumbx90             # change to your github username
+  username: pwndumb             # change to your github username
 
 twitter:
-  username: dumbx90_            # change to your twitter username
+  username: pwndumb_            # change to your twitter username
 
 social:
-  name: dumbx90                   # it will shows as the copyright owner in Footer
-  email: dumbx90@protonmail.com             # change to your email address
+  name: pwndumb                   # it will shows as the copyright owner in Footer
+  email: pwndumb@protonmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/dumbx90_      # change to your twitter homepage
-    - https://github.com/dumbx90      # change to your github homepage
+    - https://twitter.com/pwndumb_      # change to your twitter homepage
+    - https://github.com/pwndumb      # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username

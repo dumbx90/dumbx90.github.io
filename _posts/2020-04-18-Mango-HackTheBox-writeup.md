@@ -1,12 +1,12 @@
 ---
-title: Mango HackTheBox writeup made by a dumb !!!
-author: dumbx90
+title: Mango HackTheBox writeup
+author: pwndumb
 date: 2020-04-18 14:10:00 +0800
 categories: [HTB, Writeup]
 tags: [htb,pentest,linux,web,medium,retired,nosqli]
 ---
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/mango-description.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/mango-description.png?raw=true)
 
 
 
@@ -74,7 +74,7 @@ Lets check the web page:
 
 ## Web Page 
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/mango-admin-portal.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/mango-admin-portal.png?raw=true)
 
 
 ****
@@ -90,7 +90,7 @@ Basic in NoSQL keep the data in a variety of formats beside the table columns of
 
 After some default credentials failed to log in, lets understating how the application deal with  it. Lets fireup burp and intercept the request:
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/mango-burp-login-field.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/mango-burp-login-field.png?raw=true)
 
 So like a **SQL**  traditional  the php send the login parameters (username and password) in a post.  The operator **$ne** is in for ****NoSQLI**** like **single quotes**  is in for **SQLI** .  How the php handle with the **NoSQL** query is the key to bypass the login portal.
 
@@ -162,7 +162,7 @@ Content-Type: text/html; charset=UTF-8
 
 So, we achieve a 302 code. 
 
-![](https://github.com/dumbx90/dumbx90.github.io/blob/master/assets/img/commons/hackthebox/mango-bypass-login.png?raw=true)
+![](https://github.com/pwndumb/pwndumb.github.io/blob/master/assets/img/commons/hackthebox/mango-bypass-login.png?raw=true)
 
 
 

