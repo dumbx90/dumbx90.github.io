@@ -33,9 +33,7 @@ The application a  **Buffer overflow** vulnerability  in  **gets** function. Whe
 # The Vulnerable application 
 
 
-
 ## Disassemble the program in `GDB`
-
 
 
 Following the tutorial in the GitHub page, I set up the docker container with vulnerable application. To connect I just type `nc 127.0.0.1 1024` and receive the following instructions:
@@ -226,11 +224,11 @@ And the man page of *strcmp*:
 So, for the get a buffer overflow I have to send the correct password (I already known because I saw in `gdb`.) and exploit the difference between *gets* and *strcmp*.  One stop before `
 ` and other before `\x0`.  
 
-## The Exploit 
+# The Exploit 
 
 
 
-###  Buffer Overflow 
+##  Buffer Overflow 
 
 
 
@@ -555,7 +553,7 @@ Bumm. Buffer overflow 🎉.
 
 
 
-### The Padding
+## The Padding
 
 
 
@@ -638,11 +636,11 @@ Lets check  this again. Now send `242 A's` and `8 B's`:
 
 
 
-## Final Exploit
+# Final Exploit
 
 
 
-### Another pitfall 
+## Another pitfall 
 
 
 
@@ -809,7 +807,7 @@ Unique gadgets found: 3
 
 Pick up the first, put before call our `backdoor` function and get a shell.
 
-### Exploit 
+## Functional Exploit 
 
 For the functional  exploit, I  used `pwntools` that gave more focus in binary exploitation part and less in python stuff. 
 
