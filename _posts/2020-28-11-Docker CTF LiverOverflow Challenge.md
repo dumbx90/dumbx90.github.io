@@ -198,9 +198,9 @@ pwndbg>
 
 
 
-This is most difficult to me understand.  When I try to overflow the program send a big string, I not reach a buffer overflow.This was frustrating .  After while, I decide to come back to bash code and finally discovery whats happening. 
+This is most difficult to me understand.  When I try to overflow the program sending a big string, I'm not reach a buffer overflow.This was frustrating. After while, I decide to come back to assembly code and finally discovery whats happening. 
 
-The trick wraps  *strcmp* and *gets*.  Reading the man page of both and after a lot of try and erros I finally understating what is going on. According man page of *gets* 
+The trick wraps  *strcmp* and *gets*. Reading the man page of both and after a lot of try and erros I finally understating what is going on. According man page of *gets* 
 
 
 
