@@ -7,7 +7,7 @@ tags: [linux,pwnexploitation]
 ---
 # Synopsis
 
-The application a  **Buffer overflow** vulnerability  in  **gets** function. When I reach  buffer overflow, I'm able to redirect the flow for  **backdoor** function that has **system call** with **/bin/sh** as argument. 
+The application has a **Buffer overflow** vulnerability  in  **gets** function. When I reach  buffer overflow, I'm able to redirect the flow for  **backdoor** function that has **system call** with **/bin/sh** as argument. 
 
 > 10 min read.
 
