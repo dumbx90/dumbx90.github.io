@@ -192,7 +192,7 @@ pwndbg>
 
 
 
-:smile: Very interesting.  The backdoor functions call system with `/bin/sh`  as argument.  If I can get buffer overflow, I be able to redirect the program for this functions and get my :shell:.  
+:smile: Very interesting.  The backdoor functions call system with `/bin/sh`  as argument.  If I can get buffer overflow, I will be able to redirect the program for this functions and get my :shell:.  
 
 ## The Problem 
 
