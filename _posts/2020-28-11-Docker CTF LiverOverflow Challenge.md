@@ -284,7 +284,7 @@ MiB Swap:   1024.0 total,   1024.0 free,      0.0 used.   1492.0 avail Mem
 
 Let's do this inside `gdb`. For this I change the python script for send `150 A's`, `100 B's`  and `50 C's`. Save the output in file with redirect and attach the program in `gdb`:
 
-<img src="" alt="Payload in hexadecimal" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/docker-ctf-liveoverflow-challenge/hexyl%20payload.png" alt="Payload in hexadecimal" style="zoom:67%;" />
 
 
 
