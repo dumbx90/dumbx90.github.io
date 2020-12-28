@@ -17,7 +17,7 @@ This little post intend explain how I solved the first chall of Rop [**Rop Empor
 <div align="justify" markdown="1">
 First, lets uderstanding a little bit of memory layout and see how the ***stack*** works .
 
-How the  ***stack*** grow depends on the [ABI - Application binary interface](https://en.wikipedia.org/wiki/Application_binary_interface). For now, I will assume the ***stack***  grow downforward, wich is corretc in most of the opearations systems architetures like IA32.  
+How the  ***stack*** grow depends on the [ABI - Application binary interface](https://en.wikipedia.org/wiki/Application_binary_interface). For now, I will assume the ***stack***  grows in downward direction, wich is corretc in most of the opearations systems architetures like IA32.  
 The ***stack*** is a LIFO (Last In, First Out) data structure used to exchange data between memory and **cpu registers**. Generally speaking, the ***stack*** is used to statical data and **heap** for dynamic data, usually with the C function called  **malloc**. 
 
 Indeed, the ***stack*** save the context of the function. In it are keept the arguments and local variables beyond the metadata to recovery the previous context, for this are used the cpu registers.
