@@ -3,7 +3,7 @@ title: Return To What - DownUnderCTF 2020
 author: pwndumb
 date: 2021-03-01 14:10:00 +0800
 categories: [Pwn,Linux]
-tags: [linux,pwn]
+tags: [linux,pwn,linux,rop]
 ---
 
 # Synopsis
@@ -208,7 +208,7 @@ After check in [https://libc.nullbyte.cat/?q=puts%3Ad90](https://libc.nullbyte.c
 
 Now we know what the libc is, we can easily calculate the libc base address. What this is necessary ? With this information we can calculate the offset of system function and the string "/bin/sh". That all information we need to construct a `rop chain` that will gave us a nice shell. 
 
-```
+```python
 #!/usr/bin/env python3
 from pwn import *
 
@@ -284,7 +284,7 @@ if __name__ == "__main__":
 Now we already know the base address of libc, we can calculate the address of `/bin/sh` and `system` inside the libc. This information will be used to pwn system.  
 The second payload will be like the first, but now we not return to main. Instead we try to return to `system` with `/bin/sh` as parameter. 
 
-```
+```python
 #!/usr/bin/env python3
 
 from pwn import *
