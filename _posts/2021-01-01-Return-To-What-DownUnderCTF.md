@@ -414,7 +414,7 @@ if __name__ == "__main__":
 
 ## Reference Links
 
-![LiveOverflow BinExploitation Youtube List](https://youtu.be/iyAyN3GFM7A)
+[LiveOverflow BinExploitation Youtube List](https://youtu.be/iyAyN3GFM7A)
 ![bi0s wiki](https://wiki.bi0s.in/pwning/return2libc/return-to-libc/)
-![Return to Libc by Saif El-Sherei](https://www.exploit-db.com/docs/english/28553-linux-classic-return-to-libc-&-return-to-libc-chaining-tutorial.pdf)
-![Rop Code Arcana](https://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html)
+[Return to Libc by Saif El-Sherei](https://www.exploit-db.com/docs/english/28553-linux-classic-return-to-libc-&-return-to-libc-chaining-tutorial.pdf)
+[Rop Code Arcana](https://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html)
