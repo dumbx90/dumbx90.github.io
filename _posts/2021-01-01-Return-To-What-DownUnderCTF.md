@@ -43,7 +43,7 @@ $ sudo docker run --rm -v --cap-add=SYS_PTRACE -p 1337:1337 -d --name returntowh
 Lets check if works fine: 
 
 ```bash
-$ sudo docker ps                                                         [5:38:55]
+$ sudo docker ps
 CONTAINER ID   IMAGE                       COMMAND                  CREATED       STATUS       PORTS                    NAMES
 351e7a160dc8   returntowhat:downunderctf   "socat -T60 TCP-LIST…"   5 hours ago   Up 5 hours   0.0.0.0:1337->1337/tcp   returntowhat
 
@@ -54,7 +54,7 @@ CONTAINER ID   IMAGE                       COMMAND                  CREATED     
 Let's see how program works. Just connect with `netcat` in port `1337`. The output is something like the lines below:
 
 ```bash
-$ nc -nv 192.168.64.131 1337                                             [5:41:24]
+$ nc -nv 192.168.64.131 1337
 Connection to 192.168.64.131 1337 port [tcp/*] succeeded!
 Today, we'll have a lesson in returns.
 Where would you like to return to?
@@ -103,7 +103,7 @@ gets() reads a line from stdin into the buffer pointed to by s until either a te
 
 ## The `vuln` function
 
-The vuln function put the string that you saw in `rdi` and call `puts`.In the next lines the program setup the variables in register to call `gets`function.  Pay attention in size of input buffer expect in gets that is equal `0x30=48`. Here is our buffer overflow.
+The vuln function put the string that you saw in `rdi` and call `puts`. In the next lines the program setup the variables in register to call `gets`function.  Pay attention in size of input buffer expect in gets that is equal `0x30=48`. Here is our buffer overflow.
 
 ```
 [0x00401185]> pdf
