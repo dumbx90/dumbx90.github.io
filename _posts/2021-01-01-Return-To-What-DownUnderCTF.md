@@ -198,7 +198,7 @@ main()
 
 ```
 
-![leaked-puts-address](img/leaked-puts-address.png)
+[leaked-puts-address](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/return-to-what/leaked-puts-address.png)
 
 The script work as expected. Now I used one of many libc databases on internet do check what libc is. 
 
@@ -277,7 +277,7 @@ if __name__ == "__main__":
 
 ```
 
-![libc-base-address](img/libc-base-address.png)
+[LIBC-Base Address](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/return-to-what/libc-base-address.png)
 
 # Final Exploit
 
@@ -410,7 +410,7 @@ if __name__ == "__main__":
     main()
 ```
 
-![Getting Shell](img/vim-awesome-script-terminal-running.jpg)
+![Getting Shell](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/return-to-what/vim-awesome-script-terminal-running.png)
 
 ## Reference Links
 
