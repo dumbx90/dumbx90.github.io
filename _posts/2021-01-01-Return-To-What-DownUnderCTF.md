@@ -198,7 +198,7 @@ main()
 
 ```
 
-[leaked-puts-address](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/return-to-what/leaked-puts-address.png)
+![leaked-puts-address](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/return-to-what/leaked-puts-address.png)
 
 The script work as expected. Now I used one of many libc databases on internet do check what libc is. 
 
@@ -277,7 +277,7 @@ if __name__ == "__main__":
 
 ```
 
-[LIBC-Base Address](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/return-to-what/libc-base-address.png)
+![LIBC-Base Address](https://raw.githubusercontent.com/pwndumb/pwndumb.github.io/master/assets/img/commons/return-to-what/libc-base-address.png)
 
 # Final Exploit
 
