@@ -26,9 +26,9 @@ The application has a *buffer overflow in gets function*. I will abuse that for 
 
 # The Vulnerable application 
 
-The application it's a simple `ELF 64` program that display a message and wait for user input. To replicate the `CTF environment` I created a `docker` with the challenge setup. Just follow instructions in the link below to have a challenge running in port 1337 of your machine.  
+The application it's a simple `ELF 64` program that display a message and wait for user input. To replicate the `CTF environment` I created a `docker` with the challenge to mimic `CTF enviroment`. Just follow the instructions on the link at the bottom of the page to have a challenge running in port 1337 of your machine.  
 
-- [Return to What, DownUnderCTF 2020](https://github.com/DownUnderCTF/Challenges_2020_public/tree/master/pwn/return-to-what){:target="_blank"}
+
 
 
 ## Setup The Application
@@ -419,3 +419,4 @@ if __name__ == "__main__":
 - [bi0s wiki](https://wiki.bi0s.in/pwning/return2libc/return-to-libc/){:target="_blank"}
 - [Return to Libc by Saif El-Sherei](https://www.exploit-db.com/docs/english/28553-linux-classic-return-to-libc-&-return-to-libc-chaining-tutorial.pdf){:target="_blank"}
 - [Rop Code Arcana](https://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html){:target="_blank"}
+- [Return to What, DownUnderCTF 2020](https://github.com/DownUnderCTF/Challenges_2020_public/tree/master/pwn/return-to-what){:target="_blank"}
